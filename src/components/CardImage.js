@@ -9,8 +9,8 @@ const CardImage = ({ image }) => {
             <img src={image.webformatURL} alt="" className="w-full"/>
           </div>
           <div className="px-6 py-4">
-            <div className="font-bold text-blue-700 text-xl mb-2">
-              Photo by {image.user}
+            <div className="mb-4 text-lg">
+              Photo by: <strong className="text-blue-700 mb-2 uppercase">{image.user}</strong>
             </div>
             <ul>
               <li>
@@ -27,7 +27,7 @@ const CardImage = ({ image }) => {
     
           <div className="px-6 py-4">
               {tags.map((tag, index) => (
-                  <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-grey-700 mr-2 md:mb-2">
+                  <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-grey-700 mr-2 mb-2">
                       #{tag}
                   </span>
               ))}
