@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 
 const CardImage = ({ image }) => {
     const tags = image.tags.split(",");
@@ -7,7 +6,7 @@ const CardImage = ({ image }) => {
     return (
         <div className="max-w-full rounded overflow-hidden shadow-lg">
           <a href={image.pageURL} className="max-h-80 overflow-hidden pointer block" target="_blank" rel="noreferrer">
-            <img src={image.webformatURL} alt={tags[0]} className="w-full"/>
+            <img src={image.webformatURL} alt={tags[0]} className="object-cover h-80 w-full"/>
           </a>
           <div className="px-6 py-4">
             <div className="mb-4 text-lg">
