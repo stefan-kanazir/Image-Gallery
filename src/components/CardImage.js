@@ -1,16 +1,17 @@
-import React from 'react'
+import React from 'react';
+// import { Link } from 'react-router-dom';
 
 const CardImage = ({ image }) => {
     const tags = image.tags.split(",");
 
     return (
         <div className="max-w-full rounded overflow-hidden shadow-lg">
-          <div className="aspect-w-3 aspect-h-4 max-h-80 overflow-hidden">
-            <img src={image.webformatURL} alt="" className="w-full"/>
-          </div>
+          <a href={image.pageURL} className="max-h-80 overflow-hidden pointer block" target="_blank" rel="noreferrer">
+            <img src={image.webformatURL} alt={tags[0]} className="w-full"/>
+          </a>
           <div className="px-6 py-4">
             <div className="mb-4 text-lg">
-              Photo by: <strong className="text-blue-700 mb-2 uppercase">{image.user}</strong>
+              Photo by: <strong className="text-green-600 mb-2 uppercase">{image.user}</strong>
             </div>
             <ul>
               <li>
